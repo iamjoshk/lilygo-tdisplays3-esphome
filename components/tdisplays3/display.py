@@ -25,7 +25,7 @@ CONF_LOAD_SMOOTH_FONTS = "load_smooth_fonts"
 CONF_ENABLE_LIBRARY_WARNINGS = "enable_library_warnings"
 
 
-if cv.Version.parse(ESPHOME_VERSION) < cv.Version.parse("2023.12.0"):
+if cv.Version.parse(ESPHOME_VERSION) > cv.Version.parse("2023.12.0"):
     TDISPLAYS3 = tdisplays3_ns.class_(
         "TDisplayS3", cg.PollingComponent, display.DisplayBuffer
     )
